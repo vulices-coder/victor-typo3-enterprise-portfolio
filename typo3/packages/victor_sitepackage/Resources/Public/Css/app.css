@@ -171,3 +171,83 @@ p {
 
     font-weight:700;
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
+.navbar a {
+    color: #f9fafb;
+    text-decoration: none;
+}
+
+.logo {
+    color: #f97316 !important;
+}
+
+.hero,
+.section-card {
+    animation: fadeUp .8s ease both;
+}
+
+.section-card:nth-of-type(2) {
+    animation-delay: .08s;
+}
+
+.section-card:nth-of-type(3) {
+    animation-delay: .16s;
+}
+
+.section-card:nth-of-type(4) {
+    animation-delay: .24s;
+}
+
+.section-card:nth-of-type(5) {
+    animation-delay: .32s;
+}
+
+.skill-grid span,
+.project-grid article {
+    transition:
+        transform .25s ease,
+        background .25s ease,
+        border-color .25s ease;
+}
+
+.skill-grid span:hover,
+.project-grid article:hover {
+    transform: translateY(-6px);
+    background: rgba(249, 115, 22, .12);
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(24px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        top: 10px;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .navbar ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+        padding: 0;
+    }
+
+    .hero,
+    .section-card {
+        padding: 2rem;
+    }
+}
