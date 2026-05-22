@@ -1,0 +1,29 @@
+services:
+  web:
+    image: martinhelmich/typo3:13
+    container_name: victor-typo3-web
+    ports:
+      - "8080:80"
+    volumes:
+      - ./typo3:/var/www/html
+    depends_on:
+      - db
+    environment:
+      TYPO3_CONTEXT: Development
+
+  db:
+    image: mysql:8
+    container_name: victor-typo3-db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: typo3
+      MYSQL_USER: typo3
+      MYSQL_PASSWORD: typo3password
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+volumes:
+  mysql_data:
