@@ -9,6 +9,9 @@ return [
         'delete' => 'deleted',
         'iconfile' => 'EXT:victor_sitepackage/Resources/Public/Icons/project.svg',
         'searchFields' => 'title,description,tech_stack',
+        'security' => [
+            'ignorePageTypeRestriction' => true,
+        ],
     ],
 
     'types' => [
