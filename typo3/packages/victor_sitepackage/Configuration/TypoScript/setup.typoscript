@@ -1,0 +1,17 @@
+page = PAGE
+page {
+  typeNum = 0
+
+  10 = FLUIDTEMPLATE
+  10 {
+    layoutRootPaths.10 = EXT:victor_sitepackage/Resources/Private/Layouts/
+    templateRootPaths.10 = EXT:victor_sitepackage/Resources/Private/Templates/
+    partialRootPaths.10 = EXT:victor_sitepackage/Resources/Private/Partials/
+
+    templateName = Default
+  }
+
+  includeCSS {
+    app = EXT:victor_sitepackage/Resources/Public/Css/app.css
+  }
+}
