@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a751fdadce06bf32e23bd53515ca93ba",
+    "content-hash": "fa4e48041af3aa3b904fd5e8d2700c05",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -6980,6 +6980,36 @@
             "time": "2026-04-16T17:21:26+00:00"
         },
         {
+            "name": "victor/victor-sitepackage",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "packages/victor_sitepackage",
+                "reference": "91d613135eda68fa68c9313d6d3001414d292954"
+            },
+            "require": {
+                "typo3/cms-core": "^13.4"
+            },
+            "type": "typo3-cms-extension",
+            "extra": {
+                "typo3/cms": {
+                    "extension-key": "victor_sitepackage"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Victor\\VictorSitepackage\\": "Classes/"
+                }
+            },
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "description": "Enterprise TYPO3 sitepackage for Victor Flores portfolio.",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
             "name": "webmozart/assert",
             "version": "2.4.0",
             "source": {
@@ -7049,7 +7079,9 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {},
+    "stability-flags": {
+        "victor/victor-sitepackage": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {},

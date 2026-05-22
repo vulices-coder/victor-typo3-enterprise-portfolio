@@ -38,9 +38,15 @@
 		"typo3/cms-sys-note": "^13.4",
 		"typo3/cms-tstemplate": "^13.4",
 		"typo3/cms-viewpage": "^13.4",
-		"typo3/cms-webhooks": "^13.4"
+		"typo3/cms-webhooks": "^13.4",
+		"victor/victor-sitepackage": "@dev"
 	},
 	"repositories": [
+		{
+			"name": "victor-sitepackage",
+			"type": "path",
+			"url": "packages/victor_sitepackage"
+		},
 		{
 			"type": "path",
 			"url": "./packages/*"
