@@ -1,17 +1,49 @@
+@import 'EXT:fluid_styled_content/Configuration/TypoScript/setup.typoscript'
+
 page = PAGE
 page {
-  typeNum = 0
 
-  10 = FLUIDTEMPLATE
-  10 {
-    layoutRootPaths.10 = EXT:victor_sitepackage/Resources/Private/Layouts/
-    templateRootPaths.10 = EXT:victor_sitepackage/Resources/Private/Templates/
-    partialRootPaths.10 = EXT:victor_sitepackage/Resources/Private/Partials/
+    typeNum = 0
 
-    templateName = Default
-  }
+    10 = FLUIDTEMPLATE
+    10 {
 
-  includeCSS {
-    app = EXT:victor_sitepackage/Resources/Public/Css/app.css
-  }
+        layoutRootPaths {
+            10 = EXT:victor_sitepackage/Resources/Private/Layouts/
+        }
+
+        templateRootPaths {
+            10 = EXT:victor_sitepackage/Resources/Private/Templates/
+        }
+
+        partialRootPaths {
+            10 = EXT:victor_sitepackage/Resources/Private/Partials/
+        }
+
+        templateName = Default
+
+        variables {
+
+            contentMain < styles.content.get
+
+        }
+
+    }
+
+    includeCSS {
+
+        app = EXT:victor_sitepackage/Resources/Public/Css/app.css
+
+    }
+
+}
+
+plugin.tx_victorsitepackage_projectshowcase {
+
+    persistence {
+
+        storagePid = 1
+
+    }
+
 }

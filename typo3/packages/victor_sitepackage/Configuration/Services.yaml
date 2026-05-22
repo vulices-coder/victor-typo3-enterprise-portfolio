@@ -1,0 +1,15 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: false
+
+  Victor\VictorSitepackage\:
+    resource: '../Classes/'
+    exclude:
+      - '../Classes/Domain/Model/'
+
+  Victor\VictorSitepackage\Controller\ProjectController:
+    autowire: true
+    autoconfigure: true
+    public: true
